@@ -1,4 +1,4 @@
-# Name: Gao Xinyu,
+# Name: Gao Xinyu, Zhang Yichi
 
 import openai
 import pandas as pd
