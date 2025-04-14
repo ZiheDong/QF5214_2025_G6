@@ -1,0 +1,48 @@
+variable,variable_meaning
+GWETTOP,The amount of water and water vapor present in the soil. Top indicates the upper 5 cm of soil. Values range from 0 for completely dry conditions to 1 for completely saturated soil.
+T10M_MIN,The minimum hourly air (dry bulb) temperature at 10 meters above the surface of the earth in the period of interest.
+V10M,The estimate of the northward wind average speed for winds blowing 10 meters above the surface of the earth.
+TS_MAX,The maximum hourly earth skin temperature in the period of interest.
+V50M,The estimate of the northward wind average speed for winds blowing 50 meters above the surface of the earth.
+V2M,The estimate of the northward wind average speed for winds blowing 2 meters above the surface of the earth.
+PBLTOP,The pressure at the top of the planet boundary layer.
+WS50M,The average of wind speed at 50 meters above the surface of the earth.
+WS50M_RANGE,The minimum and maximum hourly wind speed range at 50 meters above the surface of the earth.
+T10M,The air (dry bulb) temperature at 10 meters above the surface of the earth.
+U2M,The estimate of the eastward wind average speed for winds blowing 2 meters above the surface of the earth.
+WS2M_MIN,The minimum hourly wind speed at 2 meters above the surface of the earth in the period of interest.
+TO3,The total amount of ozone in a column extending vertically from the earth's surface to the top of the atmosphere.
+TROPT,The air (dry bulb) temperature at the tropopause pressure given by TROPPB.
+TS,The average temperature at the earth's surface.
+T2M,The average air (dry bulb) temperature at 2 meters above the surface of the earth.
+T2M_RANGE,The difference between the minimum and maximum hourly air (dry bulb) temperature at 2 meters above the surface of the earth in the period of interest.
+QV2M,The ratio of the mass of water vapor to the total mass of air at 2 meters.
+WD2M,The average of the wind direction at 2 meters above the surface of the earth.
+QV10M,The ratio of the mass of water vapor to the total mass of air at 10 meters.
+T2MDEW,The dew/frost point temperature at 2 meters above the surface of the earth.
+WS10M,The average of wind speed at 10 meters above the surface of the earth.
+RHOA,The air density at surface of the earth.
+TS_RANGE,The minimum and maximum hourly earth skin temperature range in the period of interest.
+U10M,The estimate of the eastward wind average speed for winds blowing 10 meters above the surface of the earth.
+WD50M,The average of the wind direction at 50 meters above the surface of the earth.
+TROPPB,The tropopause pressure based on the blended estimate.
+WS2M_RANGE,The minimum and maximum hourly wind speed range at 2 meters above the surface of the earth.
+RH2M,"The ratio of vapor pressure to the saturation vapor pressure with respect to a plane surface of pure water, expressed in percent."
+T2MWET,The adiabatic saturation temperature which can be measured by a thermometer covered in a water-soaked cloth over which air is passed at 2 meters above the surface of the earth.
+U50M,The estimate of the eastward wind average speed for winds blowing 50 meters above the surface of the earth.
+WS10M_MAX,The maximum hourly wind speed at 10 meters above the surface of the earth in the period of interest.
+T10M_RANGE,The minimum and maximum hourly air (dry bulb) temperature range at 10 meters above the surface of the earth in the period of interest.
+TS_MIN,The minimum hourly earth skin temperature in the period of interest.
+WS2M_MAX,The maximum hourly wind speed at 2 meters above the surface of the earth in the period of interest.
+PW,"The total atmospheric water vapor contained in a vertical column of the atmosphere, sourced from CERES."
+TQV,"The total atmospheric water vapor contained in a vertical column of unit cross-sectional area extending from the surface to the top of the atmosphere, sourced from the GMAO."
+PSH,The average intensity of solar irradiance that reaches the surface.
+T10M_MAX,The maximum hourly air (dry bulb) temperature at 10 meters above the surface of the earth in the period of interest.
+T2M_MAX,The maximum hourly air (dry bulb) temperature at 2 meters above the surface of the earth in the period of interest.
+TROPQ,The ratio of the mass of water vapor to the total mass of air at the tropopause pressure given by TROPPB.
+WS2M,The average of wind speed at 2 meters above the surface of the earth.
+WS50M_MIN,The minimum hourly wind speed at 50 meters above the surface of the earth in the period of interest.
+T2M_MIN,The minimum hourly air (dry bulb) temperature at 2 meters above the surface of the earth in the period of interest.
+WD10M,The average of the wind direction at 10 meters above the surface of the earth.
+SLP,The sea level pressure at the surface of the earth.
+TS_ADJ,The adjusted average temperature at the earth's surface. Adjusted refers to CERES source parameter.

@@ -1,0 +1,44 @@
+variable,variable_meaning
+ALLSKY_SFC_PAR_DIFF,The diffuse (scattered from original direct path by molecules or particles) Photosynthetically Active Radiation (PAR) solar irradiance incident on a horizontal plane at the surface of the earth under all sky conditions.
+CLRSKY_KT,A fraction representing clearness of the atmosphere; the clear sky insolation that is transmitted through the atmosphere to strike the surface of the earth divided by the average of top of the atmosphere total solar irradiance incident.
+ORIGINAL_ALLSKY_SFC_SW_DIFF,The diffuse (scattered from original direct path by molecules or particles) solar irradiance incident on a horizontal plane at the surface of the earth under all sky conditions.
+MIDDAY_INSOL,The total amount of solar irradiance (direct plus diffuse) incident on a horizontal plane at the earth's surface during the solar noon hour midday period.
+AOD_55,The optical thickness at 0.55 um measured vertically; the component of the atmosphere to quantify the removal of radiant energy from an incident beam.
+ALLSKY_SFC_SW_DWN,The total solar irradiance incident (direct plus diffuse) on a horizontal plane at the surface of the earth under all sky conditions. An alternative term for the total solar irradiance is the "Global Horizontal Irradiance" or GHI.
+CLRSKY_SFC_PAR_DIRH,The Photosynthetically Active Radiation (PAR) solar irradiance incident on a horizontal plane at the surface of the earth under clear sky conditions.
+CLOUD_AMT_NIGHT,The average percent of cloud amount during nighttime.
+CLRSKY_SFC_SW_UP,The upward shortwave irradiance under clearsky conditions.
+CLRSKY_NKT,The average zenith angle-independent expression of the clear sky insolation clearness index.
+CLRSKY_SFC_LW_UP,The upward thermal infrared irradiance under clear sky conditions.
+ALLSKY_SFC_SW_UP,The upward shortwave irradiance under all sky conditions.
+CLRSKY_SFC_SW_DIFF,The diffuse (scattered from original direct path by molecules or particles) solar irradiance incident on a horizontal plane at the surface of the earth under clear sky conditions.
+ALLSKY_SFC_SW_DIFF,The diffuse (scattered from original direct path by molecules or particles) solar irradiance incident on a horizontal plane at the surface of the earth under all sky conditions.
+TOA_SW_DWN,The total solar irradiance incident (direct plus diffuse) on a horizontal plane at the top of the atmosphere (extraterrestrial radiation).
+ALLSKY_SFC_SW_DIRH,The solar irradiance incident on a horizontal plane at the surface of the earth under all sky conditions.
+CLRSKY_SRF_ALB,The clear sky rate of reflectivity of the earth's surface; the ratio of the solar energy reflected by the surface of the earth compared to the total solar energy incident reaching the surface of the earth.
+ALLSKY_SRF_ALB,The all sky rate of reflectivity of the earth's surface; the ratio of the solar energy reflected by the surface of the earth compared to the total solar energy incident reaching the surface of the earth.
+CLOUD_AMT,The average percent of cloud amount during the temporal period.
+AOD_84,The optical thickness at 0.84 um measured vertically; the component of the atmosphere to quantify the removal of radiant energy from an incident beam.
+SRF_ALB_ADJ,The ratio of the solar energy reflected by the surface of the earth compared to the total solar energy incident reaching the surface of the earth. Adjusted refers to CERES source parameter.
+ALLSKY_SFC_PAR_DIRH,The Photosynthetically Active Radiation (PAR) solar irradiance incident on a horizontal plane at the surface of the earth under all sky conditions.
+ALLSKY_SFC_SW_DNI,The direct solar irradiance incident to a horizontal plane normal (perpendicular) to the direction of the sun's position under all sky conditions.
+ALLSKY_SFC_PAR_TOT,The total (direct plus diffuse) Photosynthetically Active Radiation (PAR) incident on a horizontal plane at the surface of the earth under all sky conditions.
+ALLSKY_SFC_UVA,The ultraviolet A (UVA 315nm-400nm) irradiance under all sky conditions.
+ALLSKY_SFC_LW_DWN,The downward thermal infrared irradiance under all sky conditions reaching a horizontal plane at the surface of the earth. Also known as Horizontal Infrared Radiation Intensity from the Sky.
+ALLSKY_KT,A fraction representing clearness of the atmosphere; the all sky insolation that is transmitted through the atmosphere to strike the surface of the earth divided by the average of top of the atmosphere total solar irradiance incident.
+ORIGINAL_ALLSKY_SFC_SW_DIRH,The solar irradiance incident on a horizontal plane at the surface of the earth under all sky conditions.
+ALLSKY_SFC_LW_UP,The upward thermal infrared irradiance under all sky conditions.
+CLRSKY_SFC_PAR_TOT,The total Photosynthetically Active Radiation (PAR) incident on a horizontal plane at the surface of the earth under clear sky conditions.
+ALLSKY_SFC_UV_INDEX,The ultraviolet radiation exposure index.
+AIRMASS,Air Mass according to Perez et al. 1990.
+CLRSKY_SFC_SW_DIRH,The solar irradiance incident on a horizontal plane at the surface of the earth under clear sky conditions.
+CLRSKY_SFC_SW_DNI,The direct solar irradiance incident to a horizontal plane normal (perpendicular) to the direction of the sun's position under clear sky conditions.
+TOA_SW_DNI,The total solar irradiance incident (direct plus diffuse) on a horizontal plane where oriented to the sun's position at the top of the atmosphere (extraterrestrial radiation).
+CLOUD_OD,The vertical optical thickness between the top and bottom of a cloud.
+CLOUD_AMT_DAY,The average percent of cloud amount during daylight.
+CLRSKY_SFC_LW_DWN,The downward thermal infrared irradiance under clear sky conditions reaching a horizontal plane on the surface of the earth. Also known as Horizontal Infrared Radiation Intensity from Sky.
+ALLSKY_NKT,The average zenith angle-independent expression of the all sky insolation clearness index.
+CDD0,The daily accumulation of degrees above a 0-degree-Celsius threshold when the daily mean temperature is above the threshold.
+CLRSKY_SFC_PAR_DIFF,The diffuse (scattered from original direct path by molecules or particles) Photosynthetically Active Radiation (PAR) solar irradiance incident on a horizontal plane at the surface of the earth under clear sky conditions.
+CLRSKY_SFC_SW_DWN,The total solar irradiance incident (direct plus diffuse) on a horizontal plane at the surface of the earth under clear sky conditions. An alternative term for the total solar irradiance is the "Global Horizontal Irradiance" or GHI.
+AOD_55_ADJ,The adjusted optical thickness at 0.55 um measured vertically; the component of the atmosphere to quantify the removal of radiant energy from an incident beam.
