@@ -31,6 +31,22 @@ This figure shows the distribution of abnormal data ratio across all generated C
 
 ![Bad Ratio Distribution](Picture/Bad_Ratio_Distribution.png)
 
+## STEP3: DATA_CLEAN.py
+
+The `DATA_CLEAN.py` script is designed to perform spatial interpolation to fill missing values in the selected variable datasets. 
+
+By running this script, each filtered variable's CSV file will be processed individually. Missing values will be filled using spatial interpolation techniques, and the completed datasets will be saved into a new output directory for further usage.
+
+In addition, the script will generate a visualization showing the repair ratio (i.e., the proportion of missing values that have been filled) for each variable.
+
+### Output Results
+
+- Completed CSV files for each variable (after missing value interpolation)
+- A visualization showing the repair ratio of each variable: `Repair_Ratio_Per_Variable.png`
+
+#### Example of Repair Ratio Distribution
+
+![Repair Ratio Per Variable](Picture/Repair_Ratio_Per_Variable.png)
 
 
 ## Conclusion
