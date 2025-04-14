@@ -11,5 +11,7 @@ The `US_GETALL_DAILY.py` script is designed to connect to the NASA POWER databas
 
 ![US_GETALL_DAILY Example](Picture/GET_DATA_PICTURE1.png)
 
+
+
 ## Conclusion
 This study demonstrates the advanced integration and application of database systems in the field of environmental and natural resource analysis. By systematically collecting and processing datasets related to weather and solar radiation, and incorporating state-of-the-art data processing techniques, the research significantly enhances the efficiency of environmental resource forecasting and visualization. Importantly, it also provides decision-support functions tailored to financial practitioners who may not possess a background in environmental or geosciences. These efforts contribute to a more nuanced understanding of the relationship between meteorological indicators and environmental resources, thereby improving insight into sectors with high environmental dependency, such as agricultural insurance and commodity trading.
