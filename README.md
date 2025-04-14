@@ -103,7 +103,178 @@ The figures below show the missing value ratio for each merged file. The missing
 
 ![Radiation Missing Ratio](DATA_CLEAN/Radiation_Missing_Ratio_Barplot.png)
 
+## STEP7: DATA_DATABASE.sql
 
+The `DATA_DATABASE.sql` file contains SQL scripts used to connect to the Alibaba Cloud MySQL database instance and create the required tables for subsequent data upload.
+
+These tables are designed according to the structure and categories of the processed datasets (e.g., Meteorology, Radiation), ensuring seamless integration with the data generated in previous steps.
+
+By executing this script in MySQL, all necessary tables will be automatically created in the designated database, providing a structured and ready-to-use environment for data storage and management.
+
+### Key Functions
+- Connect to Alibaba Cloud MySQL database
+- Automatically create required tables
+- Prepare the database for efficient data upload and query
+
+## STEP8: DATABASE_UPLOAD.py
+
+The `DATABASE_UPLOAD.py` script is used to establish a connection with the Alibaba Cloud MySQL database and upload the finalized local data files into their corresponding database tables.
+
+During the upload process, the script redefines the treatment rules for missing values and abnormal values to ensure consistency and data integrity. This is particularly important to support future real-time data updates or scheduled synchronization with external sources.
+
+### Key Functions
+- Connect to Alibaba Cloud MySQL database
+- Upload finalized local CSV data into structured tables
+- Re-define missing and abnormal value handling rules
+- Ensure consistency for future real-time data updates
+
+## STEP9: Data_Loader.py & Model.py
+
+The `Data_Loader.py` and `Model.py` scripts are designed for cloud-based data retrieval and time series forecasting using LSTM (Long Short-Term Memory) models.
+
+These scripts provide a complete workflow for data analysts to automatically fetch the required data from the cloud database, build the LSTM model, and perform forecasting tasks on the selected target variables.
+
+### Key Workflow
+
+1. `Data_Loader.py`
+   - Connects to the cloud database
+   - Retrieves the specified target variables
+   - Prepares and processes data for modeling
+
+2. `Model.py`
+   - Builds and trains LSTM forecasting models
+   - Performs daily predictions for the next month (future 30 days)
+   - Evaluates model performance using metrics like MSE (Mean Squared Error)
+   - Visualizes prediction results and model evaluation
+
+---
+
+### Output Results
+
+- Forecasted values for the next month (daily frequency)
+- Model evaluation metrics (e.g., MSE)
+- Visualization of historical vs. predicted values
+
+#### Example of Prediction Visualization
+
+![LSTM Prediction Result](Picture/region_1414_prediction_vs_actual.png)
+
+![LSTM Prediction Result](Picture/region_219_prediction_vs_actual.png)
+
+![LSTM Prediction Result](Picture/region_8_prediction_vs_actual.png)
+
+## STEP10: INDEX_AI_EXPERT_WEIGHT.py
+
+The `INDEX_AI_EXPERT_WEIGHT.py` script is used to assign AI expert-based weights to each variable, leveraging OpenAI's API for intelligent scoring.
+
+This script automatically interacts with OpenAI's GPT model, providing carefully designed prompts based on the description of each variable. The AI expert evaluates both the importance (weight) and the impact direction (positive or negative) of each variable.
+
+### Input Files
+- `Index_Meteorology.csv` — Contains the names and descriptions of meteorological variables.
+- `Index_Radiation.csv` — Contains the names and descriptions of radiation variables.
+
+### Key Functions
+- Automatically generate prompts based on variable descriptions.
+- Interact with OpenAI API for expert scoring.
+- Assign weight values and impact direction for each variable.
+
+---
+
+### Output Results
+
+- `AI_Assigned_Index_Weight.csv` — Contains AI-generated weight values and impact directions for all variables.
+
+| Column | Description                        |
+|--------|------------------------------------|
+| Variable | Name of the variable             |
+| Weight   | AI-assigned importance weight    |
+| Impact   | Impact direction (Positive / Negative) |
+
+## STEP11: Agri_Index_AI.py
+
+The `Agri_Index_AI.py` script is designed to calculate the AI Expert Environmental Index for agriculture by integrating AI-assigned weights with real-world data from the Alibaba Cloud database.
+
+This script connects to the Alibaba Cloud MySQL database, retrieves the required variable data, and uses the previously generated AI expert weights (`AI_Assigned_Index_Weight.csv`) to calculate a comprehensive environmental index for each location and date.
+
+The calculated index values are then written back to the database for future queries and analysis. At the same time, local CSV files containing the index results are also generated for backup or further analysis.
+
+---
+
+### Key Functions
+- Connect to Alibaba Cloud MySQL database
+- Retrieve variable data for index calculation
+- Combine AI-assigned weights with database data
+- Calculate AI Expert Environmental Index
+- Upload calculated index back to database
+- Export local result files for storage
+
+---
+
+### Output Results
+
+- Index data written into the designated table in the Alibaba Cloud database
+- Local output file:
+  - `Agri_Index_AI.csv` — Contains calculated AI Environmental Index data for all locations and timestamps.
+
+---
+
+#### Example of Index Data Output
+
+| Latitude | Longitude | Timestamp | AI_Environmental_Index |
+|----------|-----------|------------|------------------------|
+| 34.5     | -98.2     | 2024-01-01 | 0.78                   |
+| 34.5     | -98.2     | 2024-01-02 | 0.82                   |
+
+## STEP12: INDEX_UI
+
+The `INDEX_UI` module implements a web-based user interface for real-time querying and visualization of the AI Expert Environmental Index, based on data stored in the Alibaba Cloud MySQL database.
+
+This interactive web application allows users to:
+
+- Query the AI Environmental Index at any specific **location** and **timestamp**
+- View a full **national heatmap** of the index for the selected date
+- Retrieve all **meteorological station-level index values** across the United States at that time
+
+The system is designed to support both individual point queries and comprehensive spatial analysis, making it useful for analysts, policymakers, and researchers in agriculture and environmental monitoring.
+
+---
+
+### Key Features
+
+- **Interactive Query**  
+  Search for any (Latitude, Longitude, Timestamp) combination to retrieve the corresponding AI Environmental Index.
+
+- **National Heatmap Generation**  
+  Automatically generates a heatmap showing the AI Index across the United States for the selected timestamp.
+
+- **Station-Wide Index Snapshot**  
+  Displays the AI Index values for all meteorological stations at that moment.
+
+- **Real-time Database Connection**  
+  Powered by Alibaba Cloud MySQL for up-to-date data access.
+
+---
+
+### Output Examples
+
+#### 1. Individual Query Output
+![Individual Query Output](Picture/Individual_Query_Output.png)
+
+#### 2. National Heatmap
+
+![National AI Index Heatmap](Picture/National_Heatmap_Example.png)
+
+#### 3. Station-Wide Snapshot Table
+
+![Station Index Table](Picture/Station_Index_Example.png)
+
+---
+
+### Deployment Notes
+
+- Built using `Flask` + `Bootstrap` (or other framework as applicable)
+- Requires valid connection to Alibaba Cloud database
+- Compatible with desktop and tablet browsers
 
 ## Conclusion
 This study demonstrates the advanced integration and application of database systems in the field of environmental and natural resource analysis. By systematically collecting and processing datasets related to weather and solar radiation, and incorporating state-of-the-art data processing techniques, the research significantly enhances the efficiency of environmental resource forecasting and visualization. Importantly, it also provides decision-support functions tailored to financial practitioners who may not possess a background in environmental or geosciences. These efforts contribute to a more nuanced understanding of the relationship between meteorological indicators and environmental resources, thereby improving insight into sectors with high environmental dependency, such as agricultural insurance and commodity trading.
