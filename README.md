@@ -48,6 +48,62 @@ In addition, the script will generate a visualization showing the repair ratio (
 
 ![Repair Ratio Per Variable](Picture/Repair_Ratio_Per_Variable.png)
 
+## STEP4: DATA_FILLNAN.py
+
+The `DATA_FILLNAN.py` script is designed to handle the remaining missing values that cannot be filled by spatial interpolation methods — typically those located at the edges of the data grid.
+
+By running this script, all the variable datasets will be further processed to ensure complete filling of missing values. This guarantees that the final data files are fully completed without any remaining NaN values.
+
+### Key Features
+- Handle missing values that remain after spatial interpolation (e.g., edge regions).
+- Ensure 100% completeness of all variable datasets.
+- Output fully filled CSV files for each variable.
+
+## STEP5: DATA_CHECK.py
+
+The `DATA_CHECK.py` script is used to visually and quantitatively verify that all variable datasets have been fully completed, with no remaining missing values.
+
+By running this script, the completeness of each variable's data is checked and visualized. In the end, it will generate a summary file `Missing_Summary.csv` to confirm that all variables contain no missing values (NaN = 0).
+
+### Output Results
+
+- A summary CSV file showing the final missing value status of all variables: `Missing_Summary.csv`
+
+#### Example of Final Missing Value Check
+
+This file clearly demonstrates that all variable datasets have been successfully filled and no missing values remain.
+
+![Missing Value Summary](Picture/Missing_Summary.png)
+
+## STEP6: DATA_MERGE.py
+
+The `DATA_MERGE.py` script is used to merge the processed variable datasets based on their respective categories (e.g., Meteorology and Radiation).
+
+Although this merging step could also be performed directly during the database upload, due to the instability of the Alibaba Cloud database connection at that time, we chose to complete the merging locally.
+
+After merging, the combined datasets are saved separately by category. Additionally, the script performs another round of missing value checks on the merged datasets to ensure data integrity.
+
+### Output Results
+
+- Merged data files categorized by variable types (e.g., Meteorology, Radiation)
+- Missing value check for merged data
+- Visualizations showing the missing value ratio of each merged file:
+  - `Meteorology_Missing_Ratio_Barplot.png`
+  - `Radiation_Missing_Ratio_Barplot.png`
+
+#### Example of Missing Ratio Check
+
+The figures below show the missing value ratio for each merged file. The missing ratio is 0 for all variables, confirming that the data is complete and ready for further analysis.
+
+##### Meteorology Missing Ratio
+
+![Meteorology Missing Ratio](DATA_CLEAN/Meteorology_Missing_Ratio_Barplot.png)
+
+##### Radiation Missing Ratio
+
+![Radiation Missing Ratio](DATA_CLEAN/Radiation_Missing_Ratio_Barplot.png)
+
+
 
 ## Conclusion
 This study demonstrates the advanced integration and application of database systems in the field of environmental and natural resource analysis. By systematically collecting and processing datasets related to weather and solar radiation, and incorporating state-of-the-art data processing techniques, the research significantly enhances the efficiency of environmental resource forecasting and visualization. Importantly, it also provides decision-support functions tailored to financial practitioners who may not possess a background in environmental or geosciences. These efforts contribute to a more nuanced understanding of the relationship between meteorological indicators and environmental resources, thereby improving insight into sectors with high environmental dependency, such as agricultural insurance and commodity trading.
