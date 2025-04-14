@@ -6,10 +6,30 @@ NASA POWER project addresses this need by providing high-resolution meteorologic
 
 This study leverages daily meteorological and solar radiation data from the continental United States (excluding Hawaii and Alaska), sourced from NASA POWER between January 1, 2018, and December 31, 2024, to establish a multi-dimensional environmental database and develop time-series forecasting models. To dynamically predict trends in critical environmental parameters, we implemented a multi-task Long Short-Term Memory (LSTM) architecture for joint modelling. Building on these predictions, we innovatively developed an "Environmental Risk Index" to quantitatively characterize integrated environmental impacts. The index formulation adopts a dual-strategy approach, independently calculating results using both the classical Entropy Weight Method and an AI-assisted weighting scheme powered by OpenAI’s interface. Notably, the system incorporates a spatiotemporal query module that enables users to retrieve real-time index values for speciﬁed geographic coordinates and timeframes through an interactive interface.
 
-## US_GETALL_DAILY.py
+## STEP1: US_GETALL_DAILY.py
 The `US_GETALL_DAILY.py` script is designed to connect to the NASA POWER database API for automated data retrieval. This script allows users to specify the target variables, which will then be sequentially fetched from the NASA POWER API. After successful data extraction, the retrieved data for each variable will be saved locally as CSV files for further analysis or processing.
 
 ![US_GETALL_DAILY Example](Picture/GET_DATA_PICTURE1.png)
+
+## STEP2: DATA_QUALITY_CHECK.py
+The `DATA_QUALITY_CHECK.py` script is used to check the missing values and abnormal values within each variable of the dataset. It helps ensure data completeness and quality before further analysis.
+
+After completing the data retrieval process for all variables, running this script will generate:
+
+- A summary CSV file containing missing value statistics for all variables: `Data_Quality_Summary.csv`
+- A visualization showing the distribution of abnormal data ratio across all files: `Bad_Ratio_Distribution.png`
+
+### Output Example
+
+#### 1. Data Quality Summary Table
+This file records the number and proportion of missing and abnormal values for each variable.
+
+![Example of Data Quality Summary](Picture/Data_Quality_Summary.png)
+
+#### 2. Bad Ratio Distribution Plot
+This figure shows the distribution of abnormal data ratio across all generated CSV files.
+
+![Bad Ratio Distribution](Picture/Bad_Ratio_Distribution.png)
 
 
 
